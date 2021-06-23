@@ -1,0 +1,37 @@
+<ion-header>
+  <!-- <ion-toolbar color="primary"> -->
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button (click)="logout()" defaultHref="/book"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-header>
+ 
+
+
+<!-- <ion-content color="primary"> -->
+  <ion-content >
+
+  <form>
+    
+    <ion-text color="light">
+      
+      <h1 class="center">Honor Flight Rochester</h1>
+      
+      <ion-button (click)="bus_book()" expand="full" color="primary">Book Bus</ion-button>
+      <ion-button (click)="medical_sheet()" expand="full" color="primary">Medical Book</ion-button>
+    </ion-text>
+
+  </form>
+
+  <ion-button expand="full" (click)="logout()">Logout</ion-button>
+</ion-content>
+

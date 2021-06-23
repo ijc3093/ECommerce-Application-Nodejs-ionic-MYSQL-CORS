@@ -1,0 +1,41 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button (click)="busbook()" defaultHref="/book"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title >Key Contacts</ion-title>
+    <!-- <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button> -->
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-header>
+
+<!-- <ion-content color="primary"> -->
+  <ion-content >
+
+    <form>
+      
+      <ion-text color="light">
+        
+        <h1 class="center">Key Contacts</h1>
+        
+        <ion-button (click)="hilton()" expand="full" color="primary">Hilton</ion-button>
+        <ion-img class="img-group" src="assets/img/hilton.jpeg"></ion-img>
+
+        <ion-button  (click)="dunkin()" expand="full" color="primary">Dunkin Donuts</ion-button>
+        <ion-img class="img-group" src="assets/img/dunkindonuts.jpeg"></ion-img>
+
+        <ion-button  (click)="arbuys()" expand="full" color="primary">Arbuys</ion-button>
+        <ion-img class="img-group" src="assets/img/arbys.jpeg"></ion-img>
+
+      </ion-text>
+  
+    </form>
+  </ion-content>
+
+

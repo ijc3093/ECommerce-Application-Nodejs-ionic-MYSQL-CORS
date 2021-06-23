@@ -1,0 +1,50 @@
+
+<!-- Back button with a default href -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button (click)="tabs()" defaultHref="/book"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Medical Sheet</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="detail()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>ID</ion-col>
+    <ion-col>Mission ID</ion-col>
+    <ion-col>Title</ion-col>
+    <ion-col>Flight Num</ion-col>
+    <ion-col>Show Front</ion-col>
+    <ion-col>Start Date</ion-col>
+    <ion-col>End Date</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let mission of missionLists; index as i">
+    <ion-col>{{ i + 1 }}</ion-col>
+    <ion-col>{{ mission.mission_id }}</ion-col>
+    <ion-col>{{ mission.title }}</ion-col>
+    <ion-col>{{ mission.flight_num }}</ion-col>
+    <ion-col>{{ mission.show_on_front }}</ion-col>
+    <ion-col>{{ mission.start_date }}</ion-col>
+    <ion-col>{{ mission.end_date }}</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>
